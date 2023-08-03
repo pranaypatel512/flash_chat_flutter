@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../constants.dart';
 import 'primary_button.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String id = 'registration_screen';
