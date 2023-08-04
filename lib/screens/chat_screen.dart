@@ -1,13 +1,33 @@
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flash_chat_flutter/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flash_chat_flutter/constants.dart';
 
 class ChatScreen extends StatefulWidget {
-  static const String id='chat_screen';
+  static const String id = 'chat_screen';
   @override
   _ChatScreenState createState() => _ChatScreenState();
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final _auth = FirebaseAuth.instance;
+  User? _firebaseUser;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchCurrentUser();
+  }
+
+  void fetchCurrentUser() async {
+    try {
+      _firebaseUser = _auth.currentUser;
+      log('Email:${_firebaseUser?.email}');
+    } catch (e) {
+      log(e);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
