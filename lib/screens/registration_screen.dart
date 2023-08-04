@@ -1,3 +1,5 @@
+import 'package:flash_chat_flutter/logger.dart';
+import 'package:flash_chat_flutter/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -58,7 +60,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             PrimaryAppButton(
                 buttonText: 'Register',
                 buttonBackground: Colors.blueAccent,
-                buttonOnClick: () {}),
+                buttonOnClick: () async {
+                  try {
+                    final newUser = await _auth.createUserWithEmailAndPassword(
+                        email: email ?? "", password: password ?? "");
+                        if(newUser!=null){
+                          Navigator.pushNamed(context, ChatScreen.id);
+                        }
+                  } catch (e) {
+                    log(e);
+                  }
+                }),
           ],
         ),
       ),
