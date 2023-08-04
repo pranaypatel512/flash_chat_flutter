@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "623485120660",
+    "project_id": "flashchat-dae5c",
+    "storage_bucket": "flashchat-dae5c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:623485120660:android:c0c1e7bc0b962e2cb64481",
+        "android_client_info": {
+          "package_name": "com.example.flash_chat_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "623485120660-e00rlsi7p1q6c00bfeup85mgfttkrlfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAYC4T5rjUcT0gTlUl7uwJCdDIx7fHPj7E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "623485120660-e00rlsi7p1q6c00bfeup85mgfttkrlfa.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "623485120660-rm4pqc8e0orkmnv8btcpkb86clo666ab.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flashChatFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
